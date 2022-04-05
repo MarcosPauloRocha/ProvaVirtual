@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:head>
+        <h:outputStylesheet name="primetheme.css" library="css" />
+        <h:outputStylesheet name="primelayout.css" library="css" />
+        <h:outputStylesheet name="layout.css" library="css" />
+        <link rel="stylesheet" href="https://unpkg.com/primeflex@3.1.0/primeflex.css"/>
+            <title>Titulo Legal</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+
+    <h:body>
+        <div class="layout-wrapper">
+            <header class="layout-topbar">
+                <ui:include src="header.xhtml"/>
+
+
+            </header>
+            <aside class="layout-sidebar">
+                <ui:include src="sidebar.xhtml"/>
+            </aside>
+            <section class="layout-content">
+
+                <article class="content-section">
+                    <ui:insert name="body" />
+                </article>
+                <footer class="layout-footer">
+
+                </footer>
+            </section>
+
+        </div>
+    </h:body>
+</html>
