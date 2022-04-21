@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//Payara.fish//DTD Payara Server 4 Resource Definitions//EN" "https://raw.githubusercontent.com/payara/Payara-Community-Documentation/master/docs/modules/ROOT/pages/schemas/payara-resources_1_6.dtd">
+<resources>
+
+    <!-- Connects to MySql database called 'test' on a server called 'database' -->
+
+    <jdbc-connection-pool name="jdbc/postgres_local" 
+                          datasource-classname="org.postgresql.ds.PGSimpleDataSource" 
+                          is-connection-validation-required="true" 
+                          wrap-jdbc-objects="false" 
+                          connection-validation-method="auto-commit" 
+                          res-type="javax.sql.DataSource"
+                          pool-resize-quantity="2"
+                          max-pool-size="32"
+                          steady-pool-size="8">
+        <property name="URL" value="jdbc:postgresql://localhost:5432/provavirtual"></property>
+        <property name="driverClass" value="org.postgresql.Driver"></property>
+        <property name="Password" value="admin"></property>
+        <property name="portNumber" value="5432"></property>
+        <property name="databaseName" value="provavirtual"></property>
+        <property name="User" value="postgres"></property>
+        <property name="serverName" value="localhost"></property>
+    </jdbc-connection-pool>
+ 
+ 
+</resources>

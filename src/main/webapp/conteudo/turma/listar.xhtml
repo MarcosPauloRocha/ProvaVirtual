@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="body">
+        <h:form id="form">
+
+            <div class="formgrid grid">
+                <div class="field col-12 md:col-6 lg:col-2">
+                    <p:outputLabel for="id" value="#"/>
+                    <p:inputText id="id" />
+                </div>
+                <div class="field col-12 md:col-6 lg:col-4">
+                    <p:outputLabel for="turma" value="Turma"/>
+                    <p:inputText id="turma"  />
+                </div>
+                <div class="field col-12 md:col-6 lg:col-2">
+                    <p:commandButton id="pesquisar" icon="pi pi-search" />
+                </div>
+            </div>
+
+            <p:dataTable id="listaTurmas" value="" >
+
+                <f:facet name="header">
+                    Lista de Turmas
+                </f:facet>
+
+                <p:column headerText="#">
+                    <h:outputText  />
+                </p:column>
+                <p:column headerText="Turma">
+                    <h:outputText  />
+                </p:column>
+                <p:column width="35" headerText="">
+                    <h:outputText  />
+                </p:column>
+            </p:dataTable>
+
+
+        </h:form>
+
+    </ui:define>
+</ui:composition>
