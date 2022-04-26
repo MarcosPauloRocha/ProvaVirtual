@@ -4,7 +4,7 @@
 
     <!-- Connects to MySql database called 'test' on a server called 'database' -->
 
-    <jdbc-connection-pool name="jdbc/postgres_local" 
+    <jdbc-connection-pool name="provavirtual" 
                           datasource-classname="org.postgresql.ds.PGSimpleDataSource" 
                           is-connection-validation-required="true" 
                           wrap-jdbc-objects="false" 
@@ -21,6 +21,8 @@
         <property name="User" value="postgres"></property>
         <property name="serverName" value="localhost"></property>
     </jdbc-connection-pool>
- 
+    <jdbc-resource enabled="true" jndi-name="jdbc/postgres_local" object-type="user" pool-name="provavirtual">
+        <description>Test DataSource jdbc/postgres_local for Connection Pool provavirtual</description>
+    </jdbc-resource>
  
 </resources>

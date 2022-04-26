@@ -5,7 +5,7 @@
                  version="3.0">
     <persistence-unit name="provavirtualPU">
         <!--<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>-->
-        <jta-data-source>java:app/jdbc/postgres_local</jta-data-source>
+        <jta-data-source>jdbc/postgres_local</jta-data-source>
         <class>br.com.polidev.provavirtual.model.Usuario</class>
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <shared-cache-mode>ALL</shared-cache-mode>
