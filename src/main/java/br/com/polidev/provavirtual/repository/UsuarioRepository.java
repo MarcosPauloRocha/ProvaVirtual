@@ -5,5 +5,5 @@ import br.com.polidev.provavirtual.repository.generic.GenericRepository;
 
 
 public interface UsuarioRepository extends GenericRepository<Usuario>{
-
+   
 }

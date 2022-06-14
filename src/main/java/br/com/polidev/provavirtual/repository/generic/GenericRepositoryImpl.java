@@ -10,7 +10,7 @@ import jakarta.transaction.Transactional;
 @Transactional
 public class GenericRepositoryImpl<T extends GenericBase> implements GenericRepository<T> {
 
-    @PersistenceContext
+    @PersistenceContext(unitName = "provavirtualPU")
     protected EntityManager em;
     protected Class<T> clazz;
 
